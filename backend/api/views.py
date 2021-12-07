@@ -15,6 +15,7 @@ def apiOverview(request):
     return Response(api_urls)
 
 @api_view(['GET'])
+
 def ProductsList(request):
     products = Products.objects.all()
     serializer = ProductsSerializer(products,many=True)
